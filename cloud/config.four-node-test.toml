@@ -1,0 +1,22 @@
+# Spot estimates are per instance type and average the observed enabled AZs.
+# Refresh AWS Spot history before reusing; it is time-varying and AZ-specific.
+# t3.medium: $0.0164/us-east-1a at 2026-11-01 11:00 UTC; $0.0140/us-east-1b at 08:00 UTC.
+# t3a.medium: $0.0160/us-east-1a at 09:00 UTC; $0.0173/us-east-1b at 06:00 UTC.
+[aws]
+region = "us-east-1"
+
+[labels]
+node_type = "pac.io/node-type"
+security = "pac.io/security-level"
+instance_type = "node.kubernetes.io/instance-type"
+zone = "topology.kubernetes.io/zone"
+
+[metrics]
+max_age_seconds = 120
+
+[opa]
+url = "http://127.0.0.1:8181"
+
+[cost_usd_per_hour]
+"t3.medium" = 0.0152
+"t3a.medium" = 0.01665

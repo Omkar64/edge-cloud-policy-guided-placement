@@ -1,0 +1,16 @@
+aws_region         = "us-east-1"
+cluster_name       = "pac-phase2-lab"
+kubernetes_version = "1.36"
+
+# Replace these with two AZs available in aws_region and your current public IP /32.
+availability_zones        = ["us-east-1a", "us-east-1b"]
+cluster_api_allowed_cidrs = ["49.204.145.148/32"]
+
+# Spot is the default. Keep one worker per node class for the first experiment.
+capacity_type      = "SPOT"
+edge_desired_size  = 1
+cloud_desired_size = 1
+
+# Instance pools must be compatible (same architecture and vCPU/memory shape within each group).
+edge_instance_types  = ["t3.medium", "t3a.medium"]
+cloud_instance_types = ["t3.medium", "t3a.medium"]

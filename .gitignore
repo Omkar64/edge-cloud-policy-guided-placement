@@ -1,0 +1,40 @@
+# Python environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+kubeconfig
+pac-phase2-kubeconfig
+
+# Terraform generated files and secrets
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db

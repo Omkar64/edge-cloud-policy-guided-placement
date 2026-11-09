@@ -1,0 +1,20 @@
+# One-time test input. The Spot estimate below was last returned for us-east-1a
+# on 2026-11-01 06:00 UTC; refresh before reusing this file later.
+[aws]
+region = "us-east-1"
+
+[labels]
+node_type = "pac.io/node-type"
+security = "pac.io/security-level"
+instance_type = "node.kubernetes.io/instance-type"
+zone = "topology.kubernetes.io/zone"
+
+[metrics]
+max_age_seconds = 120
+
+[opa]
+url = "http://127.0.0.1:8181"
+
+[cost_usd_per_hour]
+"t3a.medium" = 0.0161
+"t3.medium" = 0.01600

@@ -1,0 +1,10 @@
+{
+  "id": "live-demo-workload",
+  "cpu_required": 0.25,
+  "memory_required": 0.25,
+  "max_latency": 50,
+  "max_cpu_utilization": 70,
+  "max_memory_utilization": 70,
+  "max_cost": 0.25,
+  "required_security": "high"
+}

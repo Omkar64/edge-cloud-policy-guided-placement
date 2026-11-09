@@ -1,0 +1,21 @@
+# Copy to config.toml and replace placeholders with values for the test cluster.
+# AWS prices are explicit user-supplied estimates. Do not use zero or stale values.
+[aws]
+region = "REPLACE_WITH_REGION"
+
+[labels]
+node_type = "pac.io/node-type"
+security = "pac.io/security-level"
+instance_type = "node.kubernetes.io/instance-type"
+zone = "topology.kubernetes.io/zone"
+
+[metrics]
+max_age_seconds = 60
+
+[opa]
+url = "http://localhost:8181"
+
+# Add actual current USD-per-hour estimates for each configured EC2 instance type.
+# The adapter refuses an unknown type rather than guessing.
+[cost_usd_per_hour]
+# "t3.medium" = 0.0 # Replace with a documented current estimate before use.
